@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Diskominfo Kabupaten Kuningan</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class=".container-fluid">
+        <div class="home_section">
+            <div class="navbar">
+                <img src="{{ url_for('static', filename='images/LogoDiskominfostroke.png') }}" alt="Diskominfo Logo" class="me-2">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="main_title">
+                        <h1>Buku Tamu</h1>
+                        <h3>Dinas Komunikasi dan Informatika Kabupaten Kuningan</h3>
+                        <a class="btn btn-primary" href="{{ url_for('form_tamu') }}" role="button" style="border-radius: 8px;">Isi Form</a>
+                        <a class="btn btn-primary" href="{{ url_for('daftar_tamu') }}" role="button" style="border-radius: 8px;">Data Tamu</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="{{ url_for('static', filename='images/home1.png') }}" alt="Diskominfo Logo" width="30" class="me-2" style="padding: 5px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

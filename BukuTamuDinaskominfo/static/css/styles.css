@@ -1,0 +1,117 @@
+/* HOME */
+.home_section {
+    background-color: #03395f;
+    max-height: 100%;
+    max-width: 100%;
+    
+}
+
+.navbar img {
+    width: 200px;
+    height: 100px;
+    margin-left: 100px !important;
+    margin-top: 30px !important;
+}
+
+.main_title {
+    margin-top: 150px;
+    margin-left: 120px;
+}
+
+.main_title h1 {
+    color: #ffffff;
+    font-size: 70px;
+    /* text-shadow: 5px 0 1px white, -5px 0 1px white, 0 -5px 1px white, 0 5px 1px white, 5px 5px 1px white, -5px -5px 1px white, -5px 5px 1px white, 5px -5px 1px white; */
+}
+
+.main_title h3 {
+    color: white;
+}
+
+.main_title a {
+    background-color: #027184;
+    border-color: #027184;
+    margin-right: 8px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.col img {
+    width: 350px;
+    height: 350px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    margin-top: 60px;
+}
+
+/* DAFTAR TAMU */
+.daftar_tamu_body {
+    background-color: #03395f;
+    padding-top: 10px;
+}
+.daftartamu_section {
+    max-width: 100%;
+    margin: 20px auto 5px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.daftartamu_section2 {
+    max-width: 100%;
+    margin: 5px auto 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #027184;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn:hover {
+    background-color: #096074;
+    color: white;
+}
+
+img {
+    width: 100px;
+    height: 50px;
+}
+
+.dropdown button, .dropdown ul {
+    background-color: #027184;
+    border-color: #027184;
+}
+
+.dropdown button:hover{
+    background-color: #096074;
+}
+
+.dropdown ul li {
+    background-color: #027184;
+}
+
+.dropdown ul li:hover {
+    background-color: #096074;
+}
+
+thead, .nomor_index, .tanggal_kunjungan, .jam_kunjungan {
+    text-align: center;
+}
+
+

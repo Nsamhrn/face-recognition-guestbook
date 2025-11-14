@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Tamu - Buku Tamu Diskominfo Kabupaten Kuningan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles1.css') }}">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="bg-dark text-white p-3 fixed-top" style="background-color: #03395f !important;">
+        <div class="container d-flex">
+            <a href="{{ url_for('home') }}" class="back-btn">&lt;</a>
+            <img src="{{ url_for('static', filename='images/LogoDiskominfostroke.png') }}" alt="Diskominfo Logo" class="me-2">
+            <h1 class="h3" style="padding-top: 13px !important;">Buku Tamu Diskominfo Kabupaten Kuningan</h1>
+        </div>
+    </header>
+    <div class="main_body" style="height: 650px;">
+        <div class="container mt-5">
+            <div class="form-container" style="max-height: fit-content; margin-top: 120px;">
+                <h2>Detail Kunjungan Tamu</h2>
+                <div class="row">
+                    <div class="col-1">
+                        {% for visit in kunjungan %}
+                            {% if visit.foto_tamu.foto_path %}
+                                <img src="{{ url_for('static', filename='photos/' ~ visit.foto_tamu.foto_path) }}" alt="Foto Tamu" class="img-thumbnail">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="col-2">
+                        <div class="card-body">
+                            <table>
+                                <tr>
+                                    <td class="left">Nama </td>
+                                    <td>: {{ tamu.nama }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">Email </td>
+                                    <td>: {{ tamu.email }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">Alamat </td>
+                                    <td>: {{ tamu.alamat }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">Nomor HP</td>
+                                    <td>: {{ tamu.nomor_hp }}</td>
+                                </tr>
+                                {% for visit in kunjungan %}
+                                    <tr>
+                                        <td class="left">Tanggal Kunjungan</td>
+                                        <td>: {{ visit.tanggal }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">Jam Kunjungan</td>
+                                        <td>: {{ visit.jam }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">Nama Instansi</td>
+                                        <td>: {{ visit.nama_instansi }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">Keperluan</td>
+                                        <td>: {{ visit.pesan }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+            
+    
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

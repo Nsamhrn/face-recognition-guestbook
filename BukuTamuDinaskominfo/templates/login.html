@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - Diskominfo Kabupaten Kuningan</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body class="login-body">
+    <header class="bg-dark text-white p-3 fixed-top" style="background-color: #03395f !important;">
+        <div class="container d-flex">
+            <a href="{{ url_for('home') }}" class="back-btn">&lt;</a>
+            <img src="{{ url_for('static', filename='images/LogoDiskominfostroke.png') }}" alt="Diskominfo Logo" class="me-2">
+            <h1 class="h3" style="padding-top: 13px !important; padding-left: 5px !important;">Buku Tamu Diskominfo Kabupaten Kuningan</h1>
+        </div>
+    </header>
+    <div class="row">
+        <div class="col">
+            <img src="static/images/avatar_password.png" alt="gambarlogin">
+        </div>
+        <div class="col">
+            <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <!-- Form Login -->
+                <div class="login-container">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    <h1 class="form-title">Diperlukan <span>Login</span> untuk membuka Data Tamu!</h1>
+                    <form method="POST" action="{{ url_for('login') }}">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username:</label>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan username" required>
+                        </div>
+        
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Masukkan password" required>
+                        </div>
+        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

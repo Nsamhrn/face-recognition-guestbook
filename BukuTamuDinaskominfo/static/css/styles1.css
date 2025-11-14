@@ -1,0 +1,127 @@
+/* Form Tamu */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #027184;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn:hover {
+    background-color: #096074;
+    color: #ffffff;
+}
+
+.main_body{
+    background-color: #03395f;
+    /* padding: 20px; */
+    padding-top: 50px;
+}
+
+.form-container {
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+    max-width: 700px; 
+    margin: auto; 
+}
+.form-label span {
+    font-weight: bold;
+}
+.info-text {
+    font-size: 0.9rem; 
+    color: #6c757d; 
+    margin-top: 15px;
+}
+
+.colcontainer {
+    width: 550px;
+    height: 585px;
+    background-color: white;
+    border-radius: 8px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+img {
+    width: 100px;
+    height: 50px;
+}
+
+.colcontainer video {
+    margin-top: 100px;
+    margin-left: 125px;
+}
+
+.message-box {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: none; 
+    width: 400px;
+    margin: auto;
+}
+
+.message-success {
+    background-color: #096074; 
+    opacity: 0.8;
+    color: white;
+    border: 1px solid #c3e6cb;
+}
+
+.message-error {
+    background-color:  #721c24; 
+    color: white; 
+    opacity: 0.9;
+    border: 1px solid #f5c6cb;
+}
+
+/* edit tamu */
+/* .form-container {
+    margin-top: 40px;
+} */
+.edittamu {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-shadow: none;
+    letter-spacing: normal;
+    text-transform: none;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* detail tamu */
+.img-thumbnail {
+    margin-top: 30px;
+    width: 200px;
+    height: auto;
+}
+
+.col-1 {
+    width: 30%;
+}
+.col-2 {
+    width: 70%;
+}
+
+table, th, td {
+    font-size: 15px;
+}
+
+.left {
+    width: 150px;
+}

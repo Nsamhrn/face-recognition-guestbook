@@ -1,0 +1,19 @@
+# Panduan Menjalankan Aplikasi Flask
+
+## 1. Cara Menjalankan Aplikasi
+1. Klik dua kali pada file BukuTamu.exe untuk menjalankan aplikasi.
+2. Tunggu beberapa saat hingga terminal terbuka.
+3. Anda akan melihat informasi seperti "Running on http://127.0.0.1:5000/".
+4. Buka browser (Chrome, Firefox, atau lainnya), lalu masukkan URL tersebut di address bar.
+
+## 3. Catatan Penting
+- Jangan memindahkan file BukuTamu.exe dari folder tempat file .env dan folder lain seperti instance berada.
+- Jika Anda mengalami error, pastikan Anda memiliki file .env yang sesuai.
+
+## 4. Penggunaan
+- Gunakan aplikasi melalui browser. Tampilan akan mengikuti file HTML yang telah disediakan.
+- File statis (seperti CSS, JS, dan gambar) terletak di folder static.
+
+## 5. Solusi Error Umum
+- *Error "Database not found"*: Pastikan file database Anda berada di folder instance di lokasi yang sama dengan file .exe.
+- *Error pada port (5000)*: Pastikan tidak ada aplikasi lain yang menggunakan port 5000.
